@@ -4,7 +4,6 @@ Created on Mon Mar 25 15:59:46 2019
 
 @author: wgh
 """
-
 import tensorflow as tf
 import globalconstants
 
