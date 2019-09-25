@@ -6,7 +6,7 @@ Created on Mon Mar 25 15:59:46 2019
 """
 
 import tensorflow as tf
-import GLOBAL_CONSTANTS as GLOBAL
+import globalconstants
 
 
 def get_centra(coordinate):#coordinate is the input of the coordination(four numbers input)
@@ -23,58 +23,58 @@ def get_anchors(coordinate):#coordinate is the input of the cnetra of the area(w
     dx=coordinate[0]
     dy=coordinate[1]
     
-    Anchor0L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[0][0]/2)
-    Anchor0L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[0][1]/2)
-    Anchor0R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[0][0]/2)
-    Anchor0R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[0][1]/2)
+    Anchor0L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[0][0]/2)
+    Anchor0L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[0][1]/2)
+    Anchor0R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[0][0]/2)
+    Anchor0R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[0][1]/2)
     Anchor0=[Anchor0L_dx,Anchor0L_dy,Anchor0R_dx,Anchor0R_dy]#produce anchor1
     
-    Anchor1L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[1][0]/2)
-    Anchor1L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[1][1]/2)
-    Anchor1R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[1][0]/2)
-    Anchor1R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[1][1]/2)
+    Anchor1L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[1][0]/2)
+    Anchor1L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[1][1]/2)
+    Anchor1R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[1][0]/2)
+    Anchor1R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[1][1]/2)
     Anchor1=[Anchor1L_dx,Anchor1L_dy,Anchor1R_dx,Anchor1R_dy]#produce anchor2
     
-    Anchor2L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[2][0]/2)
-    Anchor2L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[2][1]/2)
-    Anchor2R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[2][0]/2)
-    Anchor2R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[2][1]/2)
+    Anchor2L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[2][0]/2)
+    Anchor2L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[2][1]/2)
+    Anchor2R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[2][0]/2)
+    Anchor2R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[2][1]/2)
     Anchor2=[Anchor2L_dx,Anchor2L_dy,Anchor2R_dx,Anchor2R_dy]#produce anchor3
     
-    Anchor3L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[3][0]/2)
-    Anchor3L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[3][1]/2)
-    Anchor3R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[3][0]/2)
-    Anchor3R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[3][1]/2)
+    Anchor3L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[3][0]/2)
+    Anchor3L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[3][1]/2)
+    Anchor3R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[3][0]/2)
+    Anchor3R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[3][1]/2)
     Anchor3=[Anchor3L_dx,Anchor3L_dy,Anchor3R_dx,Anchor3R_dy]#produce anchor4
     
-    Anchor4L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[4][0]/2)
-    Anchor4L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[4][1]/2)
-    Anchor4R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[4][0]/2)
-    Anchor4R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[4][1]/2)
+    Anchor4L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[4][0]/2)
+    Anchor4L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[4][1]/2)
+    Anchor4R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[4][0]/2)
+    Anchor4R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[4][1]/2)
     Anchor4=[Anchor4L_dx,Anchor4L_dy,Anchor4R_dx,Anchor4R_dy]#produce anchor5
     
-    Anchor5L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[5][0]/2)
-    Anchor5L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[5][1]/2)
-    Anchor5R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[5][0]/2)
-    Anchor5R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[5][1]/2)
+    Anchor5L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[5][0]/2)
+    Anchor5L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[5][1]/2)
+    Anchor5R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[5][0]/2)
+    Anchor5R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[5][1]/2)
     Anchor5=[Anchor5L_dx,Anchor5L_dy,Anchor5R_dx,Anchor5R_dy]#produce anchor6
     
-    Anchor6L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[6][0]/2)
-    Anchor6L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[6][1]/2)
-    Anchor6R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[6][0]/2)
-    Anchor6R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[6][1]/2)
+    Anchor6L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[6][0]/2)
+    Anchor6L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[6][1]/2)
+    Anchor6R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[6][0]/2)
+    Anchor6R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[6][1]/2)
     Anchor6=[Anchor6L_dx,Anchor6L_dy,Anchor6R_dx,Anchor6R_dy]#produce anchor7
     
-    Anchor7L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[7][0]/2)
-    Anchor7L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[7][1]/2)
-    Anchor7R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[7][0]/2)
-    Anchor7R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[7][1]/2)
+    Anchor7L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[7][0]/2)
+    Anchor7L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[7][1]/2)
+    Anchor7R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[7][0]/2)
+    Anchor7R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[7][1]/2)
     Anchor7=[Anchor7L_dx,Anchor7L_dy,Anchor7R_dx,Anchor7R_dy]#produce anchor8
     
-    Anchor8L_dx=int(dx-GLOBAL.FLAGS.WidthAndHeight[8][0]/2)
-    Anchor8L_dy=int(dy-GLOBAL.FLAGS.WidthAndHeight[8][1]/2)
-    Anchor8R_dx=int(dx+GLOBAL.FLAGS.WidthAndHeight[8][0]/2)
-    Anchor8R_dy=int(dy+GLOBAL.FLAGS.WidthAndHeight[8][1]/2)
+    Anchor8L_dx=int(dx-globalconstants.FLAGS.WidthAndHeight[8][0]/2)
+    Anchor8L_dy=int(dy-globalconstants.FLAGS.WidthAndHeight[8][1]/2)
+    Anchor8R_dx=int(dx+globalconstants.FLAGS.WidthAndHeight[8][0]/2)
+    Anchor8R_dy=int(dy+globalconstants.FLAGS.WidthAndHeight[8][1]/2)
     Anchor8=[Anchor8L_dx,Anchor8L_dy,Anchor8R_dx,Anchor8R_dy]#produce anchor9
     
     return (Anchor0,Anchor1,Anchor2,Anchor3,Anchor4,Anchor5,Anchor6,Anchor7,Anchor8)#python中一般返回多个值都会使用元组，return的括号可以省略
